@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guillem — Backend & Cloud Engineer</title>
+  <meta name="description" content="Portfolio of Guillem, a backend and cloud engineer building multi-agent AI systems, based in Catalonia." />
+
+  <!-- Google Fonts: display face (Fraunces), body face (Inter), mono face (IBM Plex Mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- This thin bar at the very top fills left-to-right as you scroll down the page. -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="#hero" class="nav__brand">Guillem<span class="dot">.</span></a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#trail">Off the clock</a></li>
+        <li><a href="#contact" class="nav__cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section id="hero" class="hero">
+      <div class="hero__ridge" aria-hidden="true">
+        <!-- The ridge-line silhouette. It's one continuous path, drawn with a "dash" trick
+             in CSS so it can be revealed progressively — see style.css .ridge-path -->
+        <svg viewBox="0 0 1200 300" preserveAspectRatio="none" class="ridge-svg">
+          <path class="ridge-fill" d="M0,300 L0,210 L90,140 L170,190 L260,80 L340,150 L430,60 L520,170 L610,100 L700,200 L790,120 L880,180 L970,90 L1060,160 L1150,110 L1200,150 L1200,300 Z" />
+          <path id="ridgePath" class="ridge-path" d="M0,210 L90,140 L170,190 L260,80 L340,150 L430,60 L520,170 L610,100 L700,200 L790,120 L880,180 L970,90 L1060,160 L1150,110 L1200,150" />
+        </svg>
+      </div>
+
+      <div class="container hero__content">
+        <p class="eyebrow">Backend &amp; Cloud Engineer · Catalonia</p>
+        <h1>Building systems that quietly hold up<br> under real people's weight.</h1>
+        <p class="hero__lede">
+          I'm Guillem. I design and ship backend architectures — lately, migrating a
+          production conversational system to a multi-agent design on Azure AI Foundry.
+          When I'm not at a keyboard, I'm usually on a ridge, a bike, or a lake.
+        </p>
+        <div class="hero__actions">
+          <a href="#work" class="btn btn--primary">See my work</a>
+          <a href="#contact" class="btn btn--ghost">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section">
+      <div class="container about__grid">
+        <div class="about__text">
+          <p class="section__eyebrow">01 — About</p>
+          <h2>I like problems with edges.</h2>
+          <p>
+            My background is in .NET and backend architecture — the kind of work where
+            a wrong assumption doesn't show up until three services downstream. I care
+            about systems that are simple enough to reason about, even as they grow.
+          </p>
+          <p>
+            Right now that means moving a bot platform serving elderly users — across a
+            physical robot, a web client, and voice — off a legacy dialog framework and
+            onto a modern multi-agent architecture. It's the kind of migration where the
+            interesting decisions are about boundaries: what state lives where, what a
+            "session" even means across four different channels.
+          </p>
+        </div>
+
+        <aside class="about__now" aria-label="Currently">
+          <h3 class="now__title">Right now</h3>
+          <ul class="now__list">
+            <li>
+              <span class="now__label">Building</span>
+              <span>A thin compatibility layer over Azure AI Foundry agents, so existing channels keep working during migration.</span>
+            </li>
+            <li>
+              <span class="now__label">Learning</span>
+              <span>Agentic architecture patterns, session/thread management, and how to test them properly.</span>
+            </li>
+            <li>
+              <span class="now__label">Based in</span>
+              <span>Catalonia, Spain</span>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="section section--alt">
+      <div class="container">
+        <p class="section__eyebrow">02 — Skills</p>
+        <h2>What I build with</h2>
+
+        <div class="skills__grid">
+          <article class="skill-card">
+            <h3>Backend &amp; Platform</h3>
+            <ul class="tag-list">
+              <li>C# / .NET</li>
+              <li>REST APIs</li>
+              <li>Bot Framework</li>
+              <li>Background services</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <h3>Cloud &amp; AI</h3>
+            <ul class="tag-list">
+              <li>Azure</li>
+              <li>Azure AI Foundry</li>
+              <li>Semantic Kernel</li>
+              <li>Multi-agent design</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <h3>Practices</h3>
+            <ul class="tag-list">
+              <li>Architecture design</li>
+              <li>Session &amp; state management</li>
+              <li>Caching strategies</li>
+              <li>Unit testing</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section id="work" class="section">
+      <div class="container">
+        <p class="section__eyebrow">03 — Work</p>
+        <h2>Selected work</h2>
+        <p class="section__intro">
+          Replace these three cards with your own projects — the title, description, tags
+          and links are all placeholders. Even a couple of solid write-ups beats a long
+          thin list.
+        </p>
+
+        <div class="work__grid">
+          <article class="work-card">
+            <div class="work-card__meta">Project 01</div>
+            <h3>Multi-agent bot migration</h3>
+            <p>Migrating a production conversational platform from Bot Framework + Adaptive Dialogs to Azure AI Foundry agents, serving elderly users across a physical robot, web, and voice.</p>
+            <ul class="tag-list tag-list--small">
+              <li>C#</li><li>Azure AI Foundry</li><li>.NET</li>
+            </ul>
+            <a href="#" class="work-card__link">View details →</a>
+          </article>
+
+          <article class="work-card">
+            <div class="work-card__meta">Project 02</div>
+            <h3>Your second project</h3>
+            <p>Short, specific description of the problem and what you actually built — one or two sentences, no fluff.</p>
+            <ul class="tag-list tag-list--small">
+              <li>Tag</li><li>Tag</li>
+            </ul>
+            <a href="#" class="work-card__link">View details →</a>
+          </article>
+
+          <article class="work-card">
+            <div class="work-card__meta">Project 03</div>
+            <h3>Your third project</h3>
+            <p>Same pattern — what was the constraint, what did you decide, what shipped.</p>
+            <ul class="tag-list tag-list--small">
+              <li>Tag</li><li>Tag</li>
+            </ul>
+            <a href="#" class="work-card__link">View details →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ OFF THE CLOCK (personal ridge timeline) ============ -->
+    <section id="trail" class="section section--alt trail">
+      <div class="container">
+        <p class="section__eyebrow">04 — Off the clock</p>
+        <h2>Same ridge, different kind of climbing.</h2>
+
+        <div class="trail__timeline">
+          <svg viewBox="0 0 1000 120" preserveAspectRatio="none" class="trail__svg" aria-hidden="true">
+            <path d="M0,100 L100,60 L220,90 L340,30 L460,70 L580,20 L700,80 L820,40 L1000,95" />
+          </svg>
+
+          <ul class="trail__list">
+            <li><span class="trail__peak">Mountain hiking</span></li>
+            <li><span class="trail__peak">Via ferrata</span></li>
+            <li><span class="trail__peak">Cycling</span></li>
+            <li><span class="trail__peak">Volleyball</span></li>
+            <li><span class="trail__peak">Wakeboard</span></li>
+          </ul>
+        </div>
+        <p class="trail__note">Mostly around the Pyrenees. If you've got route recommendations, that's a good reason to reach out too.</p>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section contact">
+      <div class="container contact__inner">
+        <p class="section__eyebrow">05 — Contact</p>
+        <h2>Let's talk.</h2>
+        <p class="contact__lede">Open to interesting backend/cloud problems, or just a conversation about agentic systems.</p>
+
+        <div class="contact__links">
+          <a href="mailto:you@example.com" class="btn btn--primary">you@example.com</a>
+          <a href="https://github.com/yourusername" class="btn btn--ghost" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/in/yourusername" class="btn btn--ghost" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Guillem. Built by hand, hosted on Cloudflare Pages.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
