@@ -8,7 +8,37 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
 // --------------------------------------------------------------------------
-// 2. MOBILE NAV TOGGLE
+// 2. THEME TOGGLE
+// Supports a light/dark switch with persistence across visits.
+// --------------------------------------------------------------------------
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = themeToggle.querySelector('.theme-toggle__icon');
+const themeLabel = themeToggle.querySelector('.theme-toggle__label');
+const prefersLightScheme = window.matchMedia('(prefers-color-scheme: light)');
+const storedTheme = localStorage.getItem('portfolio-theme');
+
+function applyTheme(theme) {
+  const isLight = theme === 'light';
+  document.body.classList.toggle('light-theme', isLight);
+  themeToggle.setAttribute('aria-pressed', String(isLight));
+  themeIcon.textContent = isLight ? '☾' : '☀︎';
+  themeLabel.textContent = isLight ? 'Dark' : 'Light';
+}
+
+if (storedTheme) {
+  applyTheme(storedTheme);
+} else {
+  applyTheme(prefersLightScheme.matches ? 'light' : 'dark');
+}
+
+themeToggle.addEventListener('click', () => {
+  const nextTheme = document.body.classList.contains('light-theme') ? 'dark' : 'light';
+  localStorage.setItem('portfolio-theme', nextTheme);
+  applyTheme(nextTheme);
+});
+
+// --------------------------------------------------------------------------
+// 3. MOBILE NAV TOGGLE
 // The hamburger button adds/removes a CSS class; the actual show/hide
 // behaviour lives in style.css (.nav__links.is-open). JS just flips the switch.
 // --------------------------------------------------------------------------
@@ -29,7 +59,7 @@ navLinks.querySelectorAll('a').forEach((link) => {
 });
 
 // --------------------------------------------------------------------------
-// 3. SCROLL PROGRESS BAR + RIDGE-LINE DRAWING
+// 4. SCROLL PROGRESS BAR + RIDGE-LINE DRAWING
 // Both driven by the same number: how far down the page you've scrolled,
 // as a percentage (0 to 100).
 // --------------------------------------------------------------------------
@@ -65,7 +95,7 @@ window.addEventListener('scroll', updateScrollEffects, { passive: true });
 updateScrollEffects(); // run once immediately, in case the page loads pre-scrolled
 
 // --------------------------------------------------------------------------
-// 4. FADE-IN-ON-SCROLL (IntersectionObserver)
+// 5. FADE-IN-ON-SCROLL (IntersectionObserver)
 // Rather than checking scroll position manually for every element (slow,
 // fiddly math), IntersectionObserver lets the browser tell us efficiently
 // when an element enters the viewport.

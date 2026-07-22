@@ -17,6 +17,31 @@
   --accent-soft:   #e8a33d1a; /* amber at low opacity, for glows/backgrounds */
   --accent-2:      #4fb5a6;   /* glacier teal, secondary accent */
 
+  --header-bg:     rgba(16, 21, 28, 0.85);
+  --shadow:        0 10px 30px rgba(0, 0, 0, 0.22);
+
+  color-scheme: dark;
+}
+
+body.light-theme {
+  --bg:            #f7f4ee;
+  --surface:       #ffffff;
+  --surface-alt:   #f1ebdf;
+  --border:        #d8cfbf;
+
+  --text:          #171717;
+  --text-muted:    #5f584f;
+
+  --accent:        #c67b18;
+  --accent-soft:   #c67b181a;
+  --accent-2:      #2b7a73;
+
+  --header-bg:     rgba(247, 244, 238, 0.85);
+  --shadow:        0 10px 30px rgba(34, 34, 34, 0.14);
+
+  color-scheme: light;
+}
+
   --font-display:  'Fraunces', serif;
   --font-body:     'Inter', system-ui, sans-serif;
   --font-mono:     'IBM Plex Mono', monospace;
@@ -45,6 +70,7 @@ body {
   font-family: var(--font-body);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  transition: background var(--transition), color var(--transition);
 }
 
 /* Respect users who've asked their OS to reduce motion — an accessibility
@@ -108,12 +134,35 @@ h3 { font-size: 1.25rem; }
   position: sticky;
   top: 0;
   z-index: 90;
-  background: rgba(16, 21, 28, 0.85);
+  background: var(--header-bg);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
 }
 
-.nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 16px; }
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 16px;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: transform var(--transition), border-color var(--transition), background var(--transition);
+}
+.theme-toggle:hover { transform: translateY(-1px); border-color: var(--accent); }
+.theme-toggle__icon { font-size: 1rem; }
+.theme-toggle__label { font-size: 0.85rem; font-weight: 600; }
 
 .nav__brand {
   font-family: var(--font-display);
@@ -384,6 +433,7 @@ h3 { font-size: 1.25rem; }
 }
 
 @media (max-width: 640px) {
+  .nav__actions { margin-left: 0; }
   .nav__toggle { display: flex; }
 
   .nav__links {
@@ -413,4 +463,5 @@ h3 { font-size: 1.25rem; }
   .skills__grid { grid-template-columns: 1fr; }
   .hero { padding-top: 100px; padding-bottom: 120px; }
   .trail__list { justify-content: flex-start; }
+  .theme-toggle__label { display: none; }
 }
