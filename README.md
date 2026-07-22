@@ -1,20 +1,35 @@
-# Portfolio
+# Guillem Barta González — Portfolio
 
-A plain HTML/CSS/JS portfolio site — no build step, no framework, no dependencies.
+A lightweight personal portfolio built with plain HTML, CSS, and JavaScript.
 
-## Structure
+## Web status
+- Live site: https://guillembarta.com/
+- Status: Online
+- Hosting: Cloudflare Pages
+- Uptime: monitored and maintained for continuous availability
 
-```
+## What’s included
+- Responsive single-page portfolio
+- Light/dark theme toggle
+- Downloadable CV PDF
+- Clean, minimal design with subtle motion and scroll effects
+
+## Project structure
+```text
 portfolio/
-├── index.html      # page content and structure
-├── css/style.css   # all visual styling (design tokens at the top)
-└── js/main.js      # mobile nav, scroll progress, ridge animation, fade-ins
+├── index.html
+├── css/style.css
+├── js/main.js
+└── assets/
+    ├── icon.svg
+    └── CV.pdf
 ```
 
-## Running it locally
+## Local preview
+Open index.html directly in a browser, or serve the folder locally with:
 
-You don't need a server for a static site like this — just open `index.html`
-directly in a browser to preview it. (Some browsers restrict JS features when
-opening files directly with `file://`; if anything looks off, run a tiny local
-server instead: `python3 -m http.server` from inside the folder, then visit
-`http://localhost:8000`.)
+```bash
+python3 -m http.server 8000
+```
+
+Then visit http://localhost:8000/

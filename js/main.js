@@ -12,7 +12,6 @@ document.getElementById('year').textContent = new Date().getFullYear();
 // Supports a light/dark switch with persistence across visits.
 // --------------------------------------------------------------------------
 const themeToggle = document.getElementById('themeToggle');
-const themeIcon = themeToggle.querySelector('.theme-toggle__icon');
 const themeLabel = themeToggle.querySelector('.theme-toggle__label');
 const prefersLightScheme = window.matchMedia('(prefers-color-scheme: light)');
 const storedTheme = localStorage.getItem('portfolio-theme');
@@ -20,9 +19,11 @@ const storedTheme = localStorage.getItem('portfolio-theme');
 function applyTheme(theme) {
   const isLight = theme === 'light';
   document.body.classList.toggle('light-theme', isLight);
+  document.documentElement.style.colorScheme = isLight ? 'light' : 'dark';
+  themeToggle.classList.toggle('is-active', isLight);
   themeToggle.setAttribute('aria-pressed', String(isLight));
-  themeIcon.textContent = isLight ? '☾' : '☀︎';
-  themeLabel.textContent = isLight ? 'Dark' : 'Light';
+  themeToggle.setAttribute('title', isLight ? 'Switch to dark mode' : 'Switch to light mode');
+  themeLabel.textContent = isLight ? 'On' : 'Off';
 }
 
 if (storedTheme) {

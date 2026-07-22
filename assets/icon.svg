@@ -1,0 +1,15 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg" role="img">
+ <title>icon</title>
+ <desc>A rounded square badge in deep indigo containing a teal atom orbit around a stylized G-shaped code bracket, representing the intersection of physics and AI engineering.</desc>
+ <defs>
+  <clipPath id="badgeClip">
+   <rect id="svg_1" rx="40" height="200" width="200" y="40" x="240"/>
+  </clipPath>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <rect stroke="null" id="svg_2" stroke-width="1px" fill="rgb(27, 31, 59)" rx="40" height="400" width="400" y="0" x="0"/>
+  <path transform="rotate(180 126.823 200)" stroke="#529D94" id="svg_18" stroke-linejoin="round" stroke-linecap="round" stroke-width="30" fill="none" d="m168.64518,81.40322l-83.64518,118.59679l83.64518,118.59679"/>
+  <line stroke-linecap="round" stroke-linejoin="round" id="svg_19" y2="321" x2="315" y1="321" x1="184" stroke-width="30" stroke="#A98E49" fill="none"/>
+ </g>
+</svg>
