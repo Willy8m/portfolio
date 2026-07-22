@@ -20,6 +20,15 @@
   --header-bg:     rgba(16, 21, 28, 0.85);
   --shadow:        0 10px 30px rgba(0, 0, 0, 0.22);
 
+  --font-display:  'Fraunces', serif;
+  --font-body:     'Inter', system-ui, sans-serif;
+  --font-mono:     'IBM Plex Mono', monospace;
+
+  --container-w:   1100px;
+  --radius:        10px;
+
+  --transition:    200ms ease;
+
   color-scheme: dark;
 }
 
@@ -40,16 +49,6 @@ body.light-theme {
   --shadow:        0 10px 30px rgba(34, 34, 34, 0.14);
 
   color-scheme: light;
-}
-
-  --font-display:  'Fraunces', serif;
-  --font-body:     'Inter', system-ui, sans-serif;
-  --font-mono:     'IBM Plex Mono', monospace;
-
-  --container-w:   1100px;
-  --radius:        10px;
-
-  --transition:    200ms ease;
 }
 
 /* ==========================================================================

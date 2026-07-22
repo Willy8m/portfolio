@@ -24,6 +24,7 @@ function applyTheme(theme) {
   themeToggle.setAttribute('aria-pressed', String(isLight));
   themeToggle.setAttribute('title', isLight ? 'Switch to dark mode' : 'Switch to light mode');
   themeLabel.textContent = isLight ? 'On' : 'Off';
+  document.querySelector('meta[name="theme-color"]').setAttribute('content', isLight ? '#f7f4ee' : '#10151c');
 }
 
 if (storedTheme) {

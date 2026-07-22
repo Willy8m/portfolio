@@ -9,7 +9,7 @@
  <g>
   <title>Layer 1</title>
   <rect stroke="null" id="svg_2" stroke-width="1px" fill="rgb(27, 31, 59)" rx="40" height="400" width="400" y="0" x="0"/>
-  <path transform="rotate(180 126.823 200)" stroke="#529D94" id="svg_18" stroke-linejoin="round" stroke-linecap="round" stroke-width="30" fill="none" d="m168.64518,81.40322l-83.64518,118.59679l83.64518,118.59679"/>
-  <line stroke-linecap="round" stroke-linejoin="round" id="svg_19" y2="321" x2="315" y1="321" x1="184" stroke-width="30" stroke="#A98E49" fill="none"/>
+  <path transform="rotate(180 138.329 200)" stroke="#529D94" id="svg_18" stroke-linejoin="round" stroke-linecap="round" stroke-width="80" fill="none" d="m209.99054,70.91936l-143.32261,129.08065l143.32261,129.08065"/>
+  <line stroke-linecap="round" stroke-linejoin="round" id="svg_19" y2="329.88643" x2="336.34882" y1="329.88643" x1="205.34882" stroke-width="80" stroke="#A98E49" fill="none"/>
  </g>
 </svg>
